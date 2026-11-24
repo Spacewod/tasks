@@ -5,7 +5,18 @@
     <link rel="icon" type="image/svg+xml" href="/tasks/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>my-app</title>
-    <script type="module" crossorigin src="/tasks/assets/index-Djm1gmtn.js"></script>
+    <script>
+  // Этот скрипт срабатывает после того, как 404.html перенаправил нас на главную.
+  // Он проверяет, есть ли сохраненный адрес, и если да — возвращает нас туда.
+  (function(){
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
+    <script type="module" crossorigin src="/tasks/assets/index-D7x-v6zR.js"></script>
     <link rel="stylesheet" crossorigin href="/tasks/assets/index-BANwXkYd.css">
   </head>
   <body>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Перенаправление...</title>
+  <script>
+    // 1. Сохраняем текущий адрес в память браузера
+    sessionStorage.redirect = location.href;
+  </script>
+  <!-- 2. Перенаправляем на главную страницу твоего репозитория -->
+  <meta http-equiv="refresh" content="0;URL='/tasks/'">
+</head>
+<body></body>
+</html>
