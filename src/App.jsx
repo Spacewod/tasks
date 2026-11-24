@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { FaHome, FaInfoCircle, FaTasks, FaShoppingCart, } from 'react-icons/fa';
 import { useContext } from 'react';
 import { ThemeContext } from './ThemeContext';
@@ -48,9 +48,9 @@ function AppContent() {
 // 2. Главный App просто оборачивает его в BrowserRouter
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppContent />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
